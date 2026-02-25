@@ -6,10 +6,11 @@
 }
 
 body {
-    background: #f5f7fa;
+    background: #f4f6f9;
     color: #333;
 }
 
+/* NAVBAR */
 nav {
     display: flex;
     justify-content: space-between;
@@ -17,6 +18,8 @@ nav {
     padding: 20px 60px;
     background: #141e30;
     color: white;
+    position: sticky;
+    top: 0;
 }
 
 nav ul {
@@ -25,12 +28,12 @@ nav ul {
 }
 
 nav ul li {
-    margin-left: 20px;
+    margin-left: 25px;
 }
 
 nav ul li a {
-    text-decoration: none;
     color: white;
+    text-decoration: none;
     font-weight: bold;
 }
 
@@ -38,20 +41,34 @@ nav ul li a:hover {
     color: #00c6ff;
 }
 
+/* HEADER */
 header {
     text-align: center;
-    padding: 100px 20px;
+    padding: 120px 20px;
     background: linear-gradient(to right, #141e30, #243b55);
     color: white;
 }
 
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #00c6ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+    color: #141e30;
+}
+
+/* SECTIONS */
 section {
     padding: 80px 60px;
     text-align: center;
-}
-
-.skill-box {
-    margin-top: 30px;
 }
 
 .skill-box span {
@@ -70,9 +87,59 @@ section {
     transform: scale(1.1);
 }
 
+/* PROJECTS */
+.project-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    background: white;
+    padding: 20px;
+    width: 280px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+/* FOOTER */
 footer {
     background: #141e30;
     color: white;
     padding: 20px;
     text-align: center;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav ul {
+        margin-top: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 50px 20px;
+    }
+
+    .project-container {
+        flex-direction: column;
+        align-items: center;
+    }
 }
