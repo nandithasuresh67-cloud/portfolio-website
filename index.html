@@ -33,7 +33,7 @@
     </p>
 </section>
 
-<section id="skills">
+<section id="skills" class="fade-in">
     <h2>Skills</h2>
     <div class="skill-box">
         <span>HTML</span>
@@ -45,10 +45,9 @@
     </div>
 </section>
 
-<section id="projects">
+<section id="projects" class="fade-in">
     <h2>Projects</h2>
     <div class="project-container">
-
         <div class="project-card">
             <h3>Portfolio Website</h3>
             <p>Personal portfolio built using HTML & CSS and deployed using GitHub Pages.</p>
@@ -62,7 +61,7 @@
     </div>
 </section>
 
-<section id="contact">
+<section id="contact" class="fade-in">
     <h2>Contact</h2>
     <p>Email: nandithasuresh67@gmail.com</p>
     <p>
@@ -76,6 +75,20 @@
 <footer>
     <p>© 2026 Nanditha Suresh</p>
 </footer>
+<script>
+const sections = document.querySelectorAll('.fade-in');
+
+window.addEventListener('scroll', () => {
+    sections.forEach(section => {
+        const position = section.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.2;
+
+        if(position < screenPosition){
+            section.classList.add('visible');
+        }
+    });
+});
+</script>
 
 </body>
 </html>
